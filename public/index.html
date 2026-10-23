@@ -352,6 +352,7 @@ $("btnCopy").onclick = async () => {
 };
 $("btnSound").onclick = () => {
   audioOn = !audioOn;
+  music.muted = !audioOn;       
   $("btnSound").textContent = "MUSIQUITA: " + (audioOn ? "ON" : "OFF");
 };
 $("btnRematch").onclick = () => { votedRematch = true; socket.emit("rematch"); updateStatus(); };
